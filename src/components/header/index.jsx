@@ -35,7 +35,7 @@ const swLinks = [
   ];
   
 
-export const Header = () => {
+export const Header = ({fan}) => {
 
     
 
@@ -61,7 +61,7 @@ export const Header = () => {
         <div className="search-layout">
           <IconSearchSVG className="search-icon" />
           <input placeholder="Search Star Wars" type="text" />
-          <div style={{ color: "white", paddingTop: "1rem" }}>I am fan of:</div>
+          <div style={{ color: "white", paddingTop: "1rem" }}>I am fan of: {fan}</div>
         </div>
       </header>
 

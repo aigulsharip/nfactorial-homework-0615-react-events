@@ -1,5 +1,10 @@
+import {useState} from "react";
+import { DefaultContext } from "./Context";
+
+
 //импортируем стили
 import "./App.css";
+
 
 //импортируем .svg картинки как компоненты Реакт
 import { ReactComponent as StarWarsLogoSVG } from "./assets/star-wars.svg";
@@ -19,13 +24,18 @@ import { Content } from "./components/content";
 
 
 export default function App() {
-  return (
-    <>
-      <Header/>
-            <hr />
+const [fan, setFan] = useState("");
 
+const handleCreateFan = ({name}) => {
+  setFan(name);
+}
+
+  return (
+    <DefaultContext.Provider value = {{handleCreateFan}}>
+      <Header fan = {fan}/>
+      <hr />
       <Content/>
 
-    </>
+    </DefaultContext.Provider>
   );
 }
