@@ -1,5 +1,7 @@
 //импортируем стили
 import "../../App.css";
+import {SearchInput} from "../search-input"
+
 
 //импортируем .svg картинки как компоненты Реакт
 import { ReactComponent as StarWarsLogoSVG } from "../../assets/star-wars.svg";
@@ -58,9 +60,12 @@ export const Header = ({fan}) => {
           
         </div>
         <StarWarsLogoSVG />
+        
         <div className="search-layout">
           <IconSearchSVG className="search-icon" />
-          <input placeholder="Search Star Wars" type="text" />
+          <SearchInput/>
+
+          {/* <input placeholder="Search Star Wars" type="text" /> */}
           <div style={{ color: "white", paddingTop: "1rem" }}>I am fan of: {fan}</div>
         </div>
       </header>

@@ -114,3 +114,8 @@ hr {
   background-color: rgb(37, 33, 81);
   transform: translateY(4px);
 }
+
+.footer {
+  color: aqua;
+  background-color: violet;
+}
